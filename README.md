@@ -20,11 +20,11 @@
 
 ```
 StegoCrypt/
-├── encrypt_and_hide.py       # Encrypt message & hide in image
-├── reveal_and_decrypt.py     # Extract & decrypt message (needs key file)
-├── secret_output.png         # Output image with hidden encrypted data
-├── secret.key                # AES key file generated during encryption
-└── README.md                 # Project documentation
+├── encrypt.py     # Encrypt message & hide in image
+├── decrypt.py     # Extract & decrypt message (needs key file)
+├── output.png     # Output image with hidden encrypted data
+├── secret.key     # AES key file generated during encryption
+└── README.md      # Project documentation
 ```
 
 ---
@@ -48,7 +48,7 @@ pip install pillow cryptography
 ### 🔒 Step 1: Encrypt and Hide a Message
 
 ```bash
-python encrypt_and_hide.py
+python encrypt.py
 ```
 
 * Input your **secret message**.
@@ -58,7 +58,7 @@ python encrypt_and_hide.py
   * Generate a secure AES key and save it as `secret.key`
   * Encrypt the message using AES
   * Embed the encrypted data in the image using **LSB steganography**
-  * Save the output as `secret_output.png`
+  * Save the output as `output.png`
 
 ![Screenshot 2025-06-15 112041](https://github.com/user-attachments/assets/bbc34eb7-27f5-4a2b-a326-a4ddecac71ac)
 
@@ -69,10 +69,10 @@ python encrypt_and_hide.py
 ### 🔓 Step 2: Reveal and Decrypt the Message
 
 ```bash
-python reveal_and_decrypt.py
+python decrypt.py
 ```
 
-* Input the **stego image** (`secret_output.png`)
+* Input the **stego image** (`output.png`)
 * Provide the **key file** (`secret.key`)
 * Script will:
 
@@ -99,7 +99,7 @@ python reveal_and_decrypt.py
 |-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 | ![input](https://github.com/user-attachments/assets/590c81b5-36c1-414f-8f30-4e8bcb8f5dab) | ![output](https://github.com/user-attachments/assets/fe245b87-8c97-4af1-8635-b32108648900) |
 
-> ✅ Encrypted Image (`secret_output.png`) looks visually identical to the original.
+> ✅ Encrypted Image (`output.png`) looks visually identical to the original.
 
 > ❌ Hidden content is not visible without the key.
 

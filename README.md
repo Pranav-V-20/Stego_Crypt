@@ -60,6 +60,8 @@ python encrypt_and_hide.py
   * Embed the encrypted data in the image using **LSB steganography**
   * Save the output as `secret_output.png`
 
+![Screenshot 2025-06-15 112041](https://github.com/user-attachments/assets/bbc34eb7-27f5-4a2b-a326-a4ddecac71ac)
+
 🔑 **Important:** Save the `secret.key` file securely. You’ll need it for decryption!
 
 ---
@@ -78,6 +80,8 @@ python reveal_and_decrypt.py
   * Decrypt the data using the AES key from the key file
   * Display the original secret message
 
+![Screenshot 2025-06-15 115128](https://github.com/user-attachments/assets/635ad541-95a2-4d32-8183-86f349729fd2)
+
 ---
 
 ## 🔒 Security Notes
@@ -90,6 +94,10 @@ python reveal_and_decrypt.py
 ---
 
 ## 📸 Visual Example
+
+| Input Image                                                                               | Output Image |
+|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| ![input](https://github.com/user-attachments/assets/590c81b5-36c1-414f-8f30-4e8bcb8f5dab) | ![output](https://github.com/user-attachments/assets/fe245b87-8c97-4af1-8635-b32108648900) |
 
 > ✅ Encrypted Image (`secret_output.png`) looks visually identical to the original.
 
